@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hand Cricket</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="background">
+        <div id="choiceErr">
+            <h2>User need to make a choice first!!</h2>
+        </div>
+        <div class="tossSection">
+            <h2>Time for a Toss!</h2>
+            <h4>Choose your option</h4>
+            <div id="choicelist">
+                <img id="head" src="head.png" onClick="userChoice(this)" />
+
+                <img id="tail" src="tail.png" onClick="userChoice(this)" />
+            </div>
+            <button id="tossButton" onClick="tossNow()">TOSS!</button>
+        </div>
+        <div id="tossRes">
+            <div id="coinChoice"></div>
+            <div id="tossResult"></div>
+        </div>
+        <div class="tossgif">
+            <img id="tossAnimation" src="cointoss.gif">
+            <h3>Tossing<span class="load">.</span><span class="load">.</span><span class="load">.</span></h3>
+        </div>
+        <section id="status">
+            <div id="scoreStatus">Player Score: <span id="score"><span id="scorepoint">0</span>/<span
+                        id="wicket">0</span></div>
+            <div id="scoreStatus1">Computer Score: <span id="score1"><span id="scorepoint1">0</span>/<span
+                        id="wicket1">0</span></div>
+        </section>
+        <section id="playsection">
+            <section id="userplaysection">
+                <div>
+                    <img id="player" src="one.png">
+                    <h3>Player</h3>
+                </div>
+                <div>
+                    <button id="dot" onclick="play(this)">0</button>
+                    <button id="one" onclick="play(this)">1</button>
+                    <button id="two" onclick="play(this)">2</button>
+                    <button id="three" onclick="play(this)">3</button>
+                    <button id="four" onclick="play(this)">4</button>
+                    <button id="five" onclick="play(this)">5</button>
+                    <button id="six" onclick="play(this)">6</button>
+                </div>
+            </section>
+            <section id="computerplaysection">
+                <div>
+                    <img id="computer" src="one.png">
+                    <h3>Computer</h3>
+                </div>
+                <div style="visibility: hidden;">
+                    <button id="dot" onclick="play(this)">0</button>
+                    <button id="one" onclick="play(this)">1</button>
+                    <button id="two" onclick="play(this)">2</button>
+                    <button id="three" onclick="play(this)">3</button>
+                    <button id="four" onclick="play(this)">4</button>
+                    <button id="five" onclick="play(this)">5</button>
+                    <button id="six" onclick="play(this)">6</button>
+                </div>
+            </section>
+        </section>
+        <section id="firstscore">
+            <h3 id="scoresection"></h3>
+        </section>
+        <section id="finalscore">
+            <h3 id="scoresection"></h3>
+        </section>
+    </div>
+    <script src="scripting.js"></script>
+</body>
+
+</html>
