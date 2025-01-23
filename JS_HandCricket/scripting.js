@@ -100,6 +100,8 @@ document.body.addEventListener("click", (event) => {
     document.getElementsByClassName("tossSection")[0].style.display = "none";
   }
   if (event.target && event.target.id === "secondInnings") {
+    document.getElementById("player").style.display = "none";
+    document.getElementById("computer").style.display = "none";
     secondMatch = true;
     bowl = !bowl;
     document.getElementById("playsection").style.display = "block";
@@ -130,6 +132,8 @@ function play(el) {
   document.getElementById("player").src = el.id + ".png";
   const comp = Math.floor(Math.random() * 7);
   document.getElementById("computer").src = numToWords[comp] + ".png";
+  document.getElementById("player").style.display = "block";
+  document.getElementById("computer").style.display = "block";
   if (this.userWonToss) {
     if (!bowl) {
       this.checkScore(el.id, comp);
